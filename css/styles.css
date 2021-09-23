@@ -21,6 +21,38 @@
   background-color: #004241;
 }
 
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .sedan,
+.container .suv,
+.container .luxury {
+  padding: 3.5rem;
+}
+
+.container .sedan {
+  border-radius: 10px 10px 0 0;
+}
+
+.container .luxury {
+  border-radius: 0 0 10px 10px;
+}
+
+body {
+  padding: 1.5rem;
+}
+
+.attribution {
+  padding-bottom: 2rem;
+}
+
 p,
 h2 {
   color: rgba(255, 255, 255, 0.75);
@@ -38,5 +70,53 @@ p {
 
 body {
   font-size: 15px;
+}
+
+.sedan button,
+.suv button,
+.luxury button {
+  background-color: white;
+  color: #e38826;
+  border-radius: 20px;
+  padding: 0.7rem;
+  position: relative;
+  right: 1rem;
+}
+
+.sedan img,
+.suv img,
+.luxury img {
+  position: relative;
+  right: 0.5rem;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .container .sedan,
+  .container .suv,
+  .container .luxury {
+    padding-bottom: 13rem;
+  }
+  .container .sedan p,
+  .container .suv p,
+  .container .luxury p {
+    padding-bottom: 4rem;
+    font-size: x-large;
+  }
+  .container .sedan button,
+  .container .suv button,
+  .container .luxury button {
+    top: 9rem;
+  }
+  .container .sedan h2,
+  .container .suv h2,
+  .container .luxury h2 {
+    font-size: xx-large;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
